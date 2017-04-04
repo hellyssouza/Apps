@@ -4,8 +4,14 @@ $(document).ready(function(){
     });
     
     $("#but").click(function(){
+        
         if($("#CNPJ").val().length == 0){
-            alert("CNPJ não informado !");
+            alert("CNPJ não informado!");
+            return
+        }
+        
+        if($("#CNPJ").val().length < 14){
+            alert("CNPJ tem que ter 14 digitos !");
             return
         }
         
